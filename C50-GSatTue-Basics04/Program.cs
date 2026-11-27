@@ -127,17 +127,33 @@ namespace C50_GSatTue_Basics04
 
             #region Question 11
 
-   //Using the PrintBookInfo method from the question above, call it by naming the
-   //parameters, passing pages before title.
-            string k = ".net";
-            int l = 300;
-            Console.WriteLine(PrintBookInfo(pages : l,title :k));
+            //Using the PrintBookInfo method from the question above, call it by naming the
+            //parameters, passing pages before title.
+            //string k = ".net";
+            //int l = 300;
+            //Console.WriteLine(PrintBookInfo(pages : l,title :k));
 
 
             #endregion
 
-        }
+            #region Question 12
 
+            //Write a method PrintAllTitles(params string[] titles) that prints each title on its own line. 
+            //Call it with three book titles. 
+            string x ="reham ", y="ahmed ", z="fathalla";
+            PrintAllTitles(x, y, z);
+
+
+            #endregion
+        }
+        public static void  PrintAllTitles(params string[] titles)
+        {
+            for (int i = 0; i < titles.Length; i++)
+            {
+                Console.WriteLine(titles[i]);
+            }
+
+        }
 
         public static string PrintBookInfo(string title, int pages = 300)
         {
