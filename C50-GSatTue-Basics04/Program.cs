@@ -44,6 +44,23 @@ namespace C50_GSatTue_Basics04
 
             #endregion
 
+
+            #region Question 5
+            // Write a method AddBonusPages(int pages) that adds 50 to pages. Call it with a variable
+            //int pages = 400; and print pages afterward. What do you expect to see, and why? 
+            int pages = 400;
+            Console.WriteLine(pages);   //400
+           int x = AddBonusPages(pages);
+            Console.WriteLine(pages);    //400
+
+
+
+            #endregion
+
+        }
+        public static int AddBonusPages(int pages)
+        {
+            return pages + 50;
         }
         public static void PrintBookTitle(string title)
         {
