@@ -48,10 +48,10 @@ namespace C50_GSatTue_Basics04
             #region Question 5
             // Write a method AddBonusPages(int pages) that adds 50 to pages. Call it with a variable
             //int pages = 400; and print pages afterward. What do you expect to see, and why? 
-            int pages = 400;
-            Console.WriteLine(pages);   //400
-           int x = AddBonusPages(pages);
-            Console.WriteLine(pages);    //400
+           // int pages = 400;
+           // Console.WriteLine(pages);   //400
+           //int x = AddBonusPages(pages);
+           // Console.WriteLine(pages);    //400
 
             #endregion
 
@@ -70,10 +70,24 @@ namespace C50_GSatTue_Basics04
             double y = ApplyDiscount(prices);
             Console.WriteLine(prices[0]);    //20.5
 
-
-
             #endregion
 
+            #region Question 7
+
+            //  Rewrite the method from question 5 as AddBonusPagesByRef(ref int pages) using ref. 
+            //Call it and print pages afterward. How is the result different from question 5 ?
+
+
+            int pages = 400;
+            Console.WriteLine(pages);   //400
+            int x = AddBonusPages(ref pages);
+            Console.WriteLine(pages);    //450
+
+            #endregion
+        }
+        public static int AddBonusPages(ref int pages)
+        {
+            return pages + 50;
         }
         public static double ApplyDiscount(double[] prices)
         {
