@@ -35,9 +35,24 @@ namespace C50_GSatTue_Basics04
             PrintWelcomeMessage();
             #endregion
 
+            #region Question 4
+            //Write a method PrintBookTitle(string title) that prints "Book title: " + title.Call it with
+            //"Clean Code".
+          
+
+            PrintBookTitle("Clean Code");
+
+            #endregion
+
+        }
+        public static void PrintBookTitle(string title)
+        {
+
+            Console.WriteLine("Book title: " + title);
+        
         }
 
-        public static void PrintWelcomeMessage()
+       public static void PrintWelcomeMessage()
         {
             Console.WriteLine("Welcome to the Library!");
         }
