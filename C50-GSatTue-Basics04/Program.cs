@@ -1,4 +1,5 @@
 ﻿using System.Drawing;
+using System.Reflection;
 using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace C50_GSatTue_Basics04
@@ -10,8 +11,8 @@ namespace C50_GSatTue_Basics04
             #region Question 1
             // Create a one - dimensional array double[] prices with the values 25.5, 40.0, 33.75.Print
             //the second price(index 1).
-            double[] price = { 25.5, 40.0, 33.75 };
-            Console.WriteLine(price[1]);
+            //double[] price = { 25.5, 40.0, 33.75 };
+            //Console.WriteLine(price[1]);
 
             #endregion
 
@@ -39,9 +40,9 @@ namespace C50_GSatTue_Basics04
             #region Question 4
             //Write a method PrintBookTitle(string title) that prints "Book title: " + title.Call it with
             //"Clean Code".
-          
 
-            PrintBookTitle("Clean Code");
+
+            //PrintBookTitle("Clean Code");
 
             #endregion
 
@@ -105,13 +106,30 @@ namespace C50_GSatTue_Basics04
             //Write a method bool TryGetPrice(string title, out double price) that returns true and sets
             //price to 25.5 if title is "Clean Code", otherwise returns false and sets price to 0.Call it.
 
-            bool b = TryGetPrice(Console.ReadLine() ?? " ", out double price);
+            //bool b = TryGetPrice(Console.ReadLine() ?? " ", out double price);
 
 
-            Console.WriteLine(price);
+            //Console.WriteLine(price);
+
+            #endregion
+
+            #region Question 10
+
+            // Write a method PrintBookInfo(string title, int pages = 300) where pages is optional.Call
+            //it once with only a title, and once passing both a title and pages.
+            string k = ".net";
+            int pages = 300;
+            Console.WriteLine(PrintBookInfo(k,pages));
+
+            Console.WriteLine(PrintBookInfo(k, 900));
 
             #endregion
         }
+        public static string PrintBookInfo(string title, int pages = 300)
+        {
+            return title ;
+        }
+
         public static bool TryGetPrice(string title, out double price)
         {
             if (title == "Clean Code")
