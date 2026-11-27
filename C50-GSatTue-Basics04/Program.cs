@@ -53,10 +53,31 @@ namespace C50_GSatTue_Basics04
            int x = AddBonusPages(pages);
             Console.WriteLine(pages);    //400
 
+            #endregion
+
+            #region Question 6
+            //Write a method ApplyDiscount(double[] prices) that subtracts 5 from prices[0].Call it
+            // with double[] prices = { 25.5, 40.0 }; and print prices[0] afterward.What do you expect to
+            //see, and why?
+
+
+            // Reference type change value 
+
+            double[] prices = { 25.5, 40.0 };
+
+
+            Console.WriteLine(prices[0]);   //25.5
+            double y = ApplyDiscount(prices);
+            Console.WriteLine(prices[0]);    //20.5
+
 
 
             #endregion
 
+        }
+        public static double ApplyDiscount(double[] prices)
+        {
+            return prices[0] - 5;
         }
         public static int AddBonusPages(int pages)
         {
