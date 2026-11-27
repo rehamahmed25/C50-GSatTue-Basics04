@@ -49,10 +49,10 @@ namespace C50_GSatTue_Basics04
             #region Question 5
             // Write a method AddBonusPages(int pages) that adds 50 to pages. Call it with a variable
             //int pages = 400; and print pages afterward. What do you expect to see, and why? 
-           // int pages = 400;
-           // Console.WriteLine(pages);   //400
-           //int x = AddBonusPages(pages);
-           // Console.WriteLine(pages);    //400
+            // int pages = 400;
+            // Console.WriteLine(pages);   //400
+            //int x = AddBonusPages(pages);
+            // Console.WriteLine(pages);    //400
 
             #endregion
 
@@ -91,16 +91,39 @@ namespace C50_GSatTue_Basics04
             //Write a method ReplaceArray(ref double[] prices) that replaces prices entirely with a
             //new array { 10.0, 12.5, 15.0 }.Call it with your prices array and print prices.Length
             //afterward.
-            double[] prices = { 25.5, 40.0 , 70.1};
+            //double[] prices = { 25.5, 40.0 , 70.1};
 
 
-            Console.WriteLine(prices[0]);     //25.5
-            double y = ReplaceArray(ref prices);
-            Console.WriteLine(prices[0]);   //10.0
-
-
+            //Console.WriteLine(prices[0]);     //25.5
+            //double y = ReplaceArray(ref prices);
+            //Console.WriteLine(prices[0]);   //10.0
 
             #endregion
+
+            #region Question 9
+
+            //Write a method bool TryGetPrice(string title, out double price) that returns true and sets
+            //price to 25.5 if title is "Clean Code", otherwise returns false and sets price to 0.Call it.
+
+            bool b = TryGetPrice(Console.ReadLine() ?? " ", out double price);
+
+
+            Console.WriteLine(price);
+
+            #endregion
+        }
+        public static bool TryGetPrice(string title, out double price)
+        {
+            if (title == "Clean Code")
+            {
+                price = 25.5;
+                    return true;
+            }
+            else
+            {
+                price = 0;
+                return false;
+            }
         }
         public static double ReplaceArray(ref double[] prices)
         {
