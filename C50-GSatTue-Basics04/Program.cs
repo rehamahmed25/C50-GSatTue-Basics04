@@ -1,4 +1,5 @@
-﻿using static System.Runtime.InteropServices.JavaScript.JSType;
+﻿using System.Drawing;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace C50_GSatTue_Basics04
 {
@@ -63,12 +64,12 @@ namespace C50_GSatTue_Basics04
 
             // Reference type change value 
 
-            double[] prices = { 25.5, 40.0 };
+            //double[] prices = { 25.5, 40.0 };
 
 
-            Console.WriteLine(prices[0]);   //25.5
-            double y = ApplyDiscount(prices);
-            Console.WriteLine(prices[0]);    //20.5
+            //Console.WriteLine(prices[0]);   //25.5
+            //double y = ApplyDiscount(prices);
+            //Console.WriteLine(prices[0]);    //20.5
 
             #endregion
 
@@ -78,14 +79,37 @@ namespace C50_GSatTue_Basics04
             //Call it and print pages afterward. How is the result different from question 5 ?
 
 
-            int pages = 400;
-            Console.WriteLine(pages);   //400
-            int x = AddBonusPages(ref pages);
-            Console.WriteLine(pages);    //450
+            //int pages = 400;
+            //Console.WriteLine(pages);   //400
+            //int x = AddBonusPagesref(ref pages);
+            //Console.WriteLine(pages);    //450
+
+            #endregion
+
+            #region Question 8
+
+            //Write a method ReplaceArray(ref double[] prices) that replaces prices entirely with a
+            //new array { 10.0, 12.5, 15.0 }.Call it with your prices array and print prices.Length
+            //afterward.
+            double[] prices = { 25.5, 40.0 , 70.1};
+
+
+            Console.WriteLine(prices[0]);     //25.5
+            double y = ReplaceArray(ref prices);
+            Console.WriteLine(prices[0]);   //10.0
+
+
 
             #endregion
         }
-        public static int AddBonusPages(ref int pages)
+        public static double ReplaceArray(ref double[] prices)
+        {
+          
+            prices = new double[] { 10.0, 12.5, 15.0 };
+            return prices.Length;
+
+        }
+       public static int AddBonusPagesref(ref int pages)
         {
             return pages + 50;
         }
